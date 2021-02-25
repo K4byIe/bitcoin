@@ -1,82 +1,85 @@
-Bitcoin Core integration/staging tree
+Bitcoin Noyau d'intégration/arbre d'étapes
 =====================================
 
 https://bitcoincore.org
 
-For an immediately usable, binary version of the Bitcoin Core software, see
+Pour une version binaire immédiatement utilisable du logiciel Bitcoin Core, voir
 https://bitcoincore.org/en/download/.
 
-Further information about Bitcoin Core is available in the [doc folder](/doc).
+De plus amples informations sur Bitcoin Core sont disponibles dans le [dossier doc](/doc).
 
-What is Bitcoin?
+Qu'est-ce que Bitcoin ?
 ----------------
 
-Bitcoin is an experimental digital currency that enables instant payments to
-anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Bitcoin Core is the name of open source
-software which enables the use of this currency.
+Le bitcoin est une monnaie numérique expérimentale qui permet des paiements instantanés
+n'importe qui, n'importe où dans le monde. Bitcoin utilise la technologie peer-to-peer pour
+sans autorité centrale : la gestion des transactions et l'émission de monnaie sont effectuées
+collectivement par le réseau. Bitcoin Core est le nom de l'open source
+un logiciel qui permet l'utilisation de cette monnaie.
 
-For more information read the original Bitcoin whitepaper.
+Pour plus d'informations, consultez le livre blanc original de Bitcoin.
 
-License
+Licence
 -------
 
-Bitcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see https://opensource.org/licenses/MIT.
+Bitcoin Core est publié selon les termes de la licence du MIT. Voir [COPIE](COPYING) pour plus d'informations.
+ou voir https://opensource.org/licenses/MIT.
 
-Development Process
+Processus de développement
 -------------------
 
-The `master` branch is regularly built (see `doc/build-*.md` for instructions) and tested, but it is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
-regularly from release branches to indicate new official, stable release versions of Bitcoin Core.
+La branche "maître" est régulièrement construite (voir "doc/build-*.md" pour les instructions) et testée, mais il n'est pas garanti qu'elle soit
+complètement stable. [Tags](https://github.com/bitcoin/bitcoin/tags) sont créés
+régulièrement des branches de publication pour indiquer les nouvelles versions officielles et stables de Bitcoin Core.
 
-The https://github.com/bitcoin-core/gui repository is used exclusively for the
-development of the GUI. Its master branch is identical in all monotree
-repositories. Release branches and tags do not exist, so please do not fork
-that repository unless it is for development reasons.
+Le dépôt https://github.com/bitcoin-core/gui est utilisé exclusivement pour le
+développement de l'interface graphique. Sa branche maîtresse est identique dans tous les monotones
+des dépôts. Les branches et les balises de libération n'existent pas, alors veuillez ne pas bifurquer
+ce dépôt, sauf si c'est pour des raisons de développement.
 
-The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
-and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
+Le déroulement des contributions est décrit dans [CONTRIBUTING.md](CONTRIBUTING.md)
+et des conseils utiles pour les développeurs peuvent être trouvés dans [doc/developer-notes.md](doc/developer-notes.md).
 
-Testing
+Test
 -------
 
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test on short notice. Please be patient and help out by testing
-other people's pull requests, and remember this is a security-critical project where any mistake might cost people
-lots of money.
+Les essais et la révision des codes sont le goulot d'étranglement du développement ; nous obtenons plus de poids
+que nous pouvons examiner et tester à court terme. Veuillez être patient et nous aider en testant
+les demandes d'extraction d'autres personnes, et n'oubliez pas qu'il s'agit d'un projet essentiel pour la sécurité, où toute erreur pourrait coûter cher
+beaucoup d'argent.
 
-### Automated Testing
+### Tests automatisés
 
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled in configure) with: `make check`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
+Les développeurs sont fortement encouragés à écrire [tests unitaires] (src/test/README.md) pour le nouveau code, et à
+soumettre de nouveaux tests unitaires pour l'ancien code. Les tests unitaires peuvent être compilés et exécutés
+(en supposant qu'ils n'aient pas été désactivés dans le configurateur) avec : "make check". Plus de détails sur l'exécution de
+et l'extension des tests unitaires se trouvent dans [/src/test/README.md](/src/test/README.md).
 
-There are also [regression and integration tests](/test), written
-in Python.
-These tests can be run (if the [test dependencies](/test) are installed) with: `test/functional/test_runner.py`
+Il existe également des [tests de régression et d'intégration](/test), écrits
+en Python.
+Ces tests peuvent être exécutés (si les [dépendances de test](/test) sont installées) avec : `test/functional/test_runner.py`
 
-The CI (Continuous Integration) systems make sure that every pull request is built for Windows, Linux, and macOS,
-and that unit/sanity tests are run automatically.
+Les systèmes CI (Continuous Integration) s'assurent que chaque demande d'extraction est construite pour Windows, Linux et macOS,
+et que les tests d'unité/sanité sont effectués automatiquement.
 
-### Manual Quality Assurance (QA) Testing
+### Tests manuels d'assurance qualité (AQ)
 
-Changes should be tested by somebody other than the developer who wrote the
-code. This is especially important for large or high-risk changes. It is useful
-to add a test plan to the pull request description if testing the changes is
-not straightforward.
+Les modifications doivent être testées par une personne autre que le développeur qui a écrit le
+code. Ceci est particulièrement important pour les changements importants ou à haut risque. Il est utile
+d'ajouter un plan d'essai à la description de la demande de retrait si l'essai des modifications est
+pas simple.
 
-Translations
+Traductions
 ------------
 
-Changes to translations as well as new translations can be submitted to
-[Bitcoin Core's Transifex page](https://www.transifex.com/bitcoin/bitcoin/).
+Les modifications des traductions ainsi que les nouvelles traductions peuvent être soumises à
+[page Transifex de Bitcoin Core] (https://www.transifex.com/bitcoin/bitcoin/).
 
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
+Les traductions sont périodiquement extraites de Transifex et fusionnées dans le dépôt git. Voir la page
+[processus de traduction](doc/translation_process.md) pour plus de détails sur le fonctionnement.
 
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
+**Important** : Nous n'acceptons pas les changements de traduction comme des demandes de GitHub pull car la prochaine
+de Transifex les écraserait automatiquement à nouveau.
+
+
+Traduit avec www.DeepL.com/Translator (version gratuite)
