@@ -82,4 +82,4 @@ Les traductions sont périodiquement extraites de Transifex et fusionnées dans 
 de Transifex les écraserait automatiquement à nouveau.
 
 
-Traduit avec par 4po
+Traduit par 4po
