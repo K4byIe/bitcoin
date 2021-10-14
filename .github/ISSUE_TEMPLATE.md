@@ -25,3 +25,5 @@ https://github.com/bitcoin-core/gui/issues/
 
 <!-- Any extra information that might be useful in the debugging process. -->
 <!--- This is normally the contents of a `debug.log` or `config.log` file. Raw text or a link to a pastebin type site are preferred. -->
+
+<!--- Thank you for the use, many congratulations to the team. -->
